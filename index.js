@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 result = (parseFloat(firstNumber) * parseFloat(secondNumber)) / 100;
                 break;
         }
-        display.value = result;
+        display.value = result.toFixed(2);
         currentOperation = null;
     }
     function toggleSign() {
