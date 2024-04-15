@@ -35,9 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     result = parseFloat(firstNumber) / parseFloat(secondNumber);
                 }
                 else {
-                    result = 'endoidou?';
-                    redirectToUrl("https://www.youtube.com/playlist?list=PLTPg64KdGgYhYpS5nXdFgdqEZDOS5lARB")
-
+                    redirectToUrl("https://www.youtube.com/playlist?list=PLTPg64KdGgYhYpS5nXdFgdqEZDOS5lARB");
                 }
                 break;
             case '%':
@@ -52,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             display.value = parseFloat(display.value) * -1;
         }
     }
-    
+
     function clear() {
         display.value = '';
     }
