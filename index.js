@@ -35,7 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     result = parseFloat(firstNumber) / parseFloat(secondNumber);
                 }
                 else {
+                    result = 'endoidou?';
                     redirectToUrl("https://www.youtube.com/playlist?list=PLTPg64KdGgYhYpS5nXdFgdqEZDOS5lARB")
+
                 }
                 break;
             case '%':
