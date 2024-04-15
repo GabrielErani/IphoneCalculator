@@ -6,7 +6,6 @@
 
 button {
     cursor: pointer;
-
 }
 
 body {
@@ -15,8 +14,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 630px;
-
+    height: 100vh;
 }
 
 #displayInput {
@@ -28,11 +26,11 @@ body {
     border: none;
     width: 100%;
     outline: none;
-
 }
 
 #calculator {
-    width: 10rem;
+    width: 300px;
+    padding: 1rem;
     gap: 0.5rem;
 }
 
@@ -51,8 +49,8 @@ body {
 
 .secondOperators,
 #percent {
-    height: 2rem;
-    width: 2rem;
+    height: 50px;
+    width: 50px;
     background-color: #dddddd;
     border: solid 0px transparent;
     border-radius: 100%;
@@ -70,11 +68,11 @@ body {
 .equals,
 .clears {
     background-color: orange;
-    color:#000000;
+    color: #000000;
     border: solid 0px transparent;
     border-radius: 100%;
-    height: 2rem;
-    width: 2rem;
+    height: 50px;
+    width: 50px;
 }
 
 .numbutton {
@@ -82,9 +80,8 @@ body {
     color: #ffffff;
     border: solid 0px transparent;
     border-radius: 100%;
-    height: 2rem;
-    width: 2rem;
-
+    height: 50px;
+    width: 50px;
 }
 
 #numButtonAndOperators {
@@ -92,4 +89,37 @@ body {
     grid-template-columns: repeat(2, 1fr);
     width: fit-content;
     gap: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    #displayInput {
+        font-size: 4em;
+    }
+
+    #calculator {
+        width: 95%;
+        gap: 1rem;
+    }
+
+    #numButtonsDiv,
+    #operators {
+        grid-gap: 1rem;
+    }
+
+    .numbutton,
+    .operator,
+    .secondOperators,
+    .equals,
+    #clear,
+    #percent,
+    #toggleSign {
+        height: 80px;
+        width: 80px;
+        font-size: 2em;
+        border-radius: 50%;
+    }
+
+    #colspan0 {
+        grid-column: span 2;
+    }
 }
