@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     let secondNumber = '';
     let currentOperation = null;
     document.getElementById('toggleSign').addEventListener('click', toggleSign);
+    function redirectToUrl(url) {
+        window.location.href = url;
+    }
 
     function appendNumber(number) {
         display.value += number;
@@ -32,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     result = parseFloat(firstNumber) / parseFloat(secondNumber);
                 }
                 else {
-                    result = 'endoidou?';
+                    redirectToUrl("https://www.youtube.com/playlist?list=PLTPg64KdGgYhYpS5nXdFgdqEZDOS5lARB")
                 }
                 break;
             case '%':
