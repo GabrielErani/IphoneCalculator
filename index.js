@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 firstNumber = display.value;
                 currentOperation = 'x^y';
                 display.value = '';
-                return; // Early return to avoid clearing the display prematurely
+                return; 
             case 'e^x':
                 result = Math.exp(parseFloat(display.value));
                 break;
