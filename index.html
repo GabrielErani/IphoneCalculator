@@ -10,37 +10,72 @@
 
 <body>
     <div id="calculator">
-        <div id="display">
-            <input type="text" id="displayInput" placeholder="0" disabled />
-        </div>
-        <div id="numButtonAndOperators">
+        <div id="containerInsideCalculator">
 
-            <div id="numButtonsDiv">
-                <button class="secondOperators" id="clear" value='C'>C</button>
-                <button class="operator" id="percent" value='%'>%</button>
-                <button class="secondOperators" id="toggleSign" value='+/-'>+/-</button>
-                <button class="numbutton" value='9'>9</button>
-                <button class="numbutton" value='8'>8</button>
-                <button class="numbutton" value='7'>7</button>
-                <button class="numbutton" value='6'>6</button>
-                <button class="numbutton" value='5'>5</button>
-                <button class="numbutton" value='4'>4</button>
-                <button class="numbutton" value='3'>3</button>
-                <button class="numbutton" value='2'>2</button>
-                <button class="numbutton" value='1'>1</button>
-                <button class="numbutton" id="colspan0" value='0'>0</button>
-                <button class="numbutton" value='.'>,</button>
+            <div id="display">
+                <input type="text" id="displayInput" placeholder="0" disabled />
             </div>
-            <div id="operators">
-                <button class="operator" value='/'>÷</button>
-                <button class="operator" value='*'>x</button>
-                <button class="operator" value='-'>-</button>
-                <button class="operator" value='+'>+</button>
-                <button class="equals" id="equal" value='='>=</button>
+            
+            <div id="numButtonAndOperators">
+                <div id="buttonsPaisagem">
+                    <button class="operatorPaisagem" value='('>(</button>
+                    <button class="operatorPaisagem" value=')'>)</button>
+                    <button class="operatorPaisagem" value='mc'>mc</button>
+                    <button class="operatorPaisagem" value='m+'>m+</button>
+                    <button class="operatorPaisagem" value='m-'>m-</button>
+                    <button class="operatorPaisagem" value='mr'>mr</button>
+                    <button class="operatorPaisagem" value='2nd'>2<sup>nd</sup></button>
+                    <button class="operatorPaisagem" value='x^2'>X<sup>2</sup></button>
+                    <button class="operatorPaisagem" value='x^3'>X<sup>3</sup></button>
+                    <button class="operatorPaisagem" value='x^y'>X<sup>y</sup></button>
+                    <button class="operatorPaisagem" value='e^x'>e<sup>x</sup></button>
+                    <button class="operatorPaisagem" value='10^x'>10<sup>x</sup></button>
+                    <button class="operatorPaisagem" value='1/x'><sup>1</sup>/<sub>x</sub></button>
+                    <button class="operatorPaisagem" value='sqrx'>&radic; x</button>
+                    <button class="operatorPaisagem" value='cubicx'>&#8731; x</button>
+                    <button class="operatorPaisagem" value='ysquarex'><sup>y</sup>&radic; x</button>
+                    <button class="operatorPaisagem" value='In'>ln</button>
+                    <button class="operatorPaisagem" value='log10'>log<sub>10</sub></button>
+                    <button class="operatorPaisagem" value='x!'>x!</button>
+                    <button class="operatorPaisagem" value='sin'>sin</button>
+                    <button class="operatorPaisagem" value='cos'>cos</button>
+                    <button class="operatorPaisagem" value='tan'>tan</button>
+                    <button class="operatorPaisagem" value='e'>e</button>
+                    <button class="operatorPaisagem" value='EE'>EE</button>
+                    <button class="operatorPaisagem" value='Rad'>Rad</button>
+                    <button class="operatorPaisagem" value='sinh'>sinh</button>
+                    <button class="operatorPaisagem" value='cosh'>cosh</button>
+                    <button class="operatorPaisagem" value='tanh'>tanh</button>
+                    <button class="operatorPaisagem" value='pi'>&#8508;</button>
+                    <button class="operatorPaisagem" value='Rand'>Rand</button>
+                </div>
+    
+                <div id="numButtonsDiv">
+                    <button class="secondOperators" id="clear" value='C'>C</button>
+                    <button class="operator" id="percent" value='%'>%</button>
+                    <button class="secondOperators" id="toggleSign" value='+/-'>+/-</button>
+                    <button class="numbutton" value='9'>9</button>
+                    <button class="numbutton" value='8'>8</button>
+                    <button class="numbutton" value='7'>7</button>
+                    <button class="numbutton" value='6'>6</button>
+                    <button class="numbutton" value='5'>5</button>
+                    <button class="numbutton" value='4'>4</button>
+                    <button class="numbutton" value='3'>3</button>
+                    <button class="numbutton" value='2'>2</button>
+                    <button class="numbutton" value='1'>1</button>
+                    <button class="numbutton" id="colspan0" value='0'>0</button>
+                    <button class="numbutton" value='.'>,</button>
+                </div>
+                <div id="operators">
+                    <button class="operator" value='/'>÷</button>
+                    <button class="operator" value='*'>x</button>
+                    <button class="operator" value='-'>-</button>
+                    <button class="operator" value='+'>+</button>
+                    <button class="equals" id="equal" value='='>=</button>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
+        </div>
 </body>
 <script type="text/javascript" src="/index.js"></script>
 
