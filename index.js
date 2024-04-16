@@ -21,72 +21,74 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function handleScientificOperation(operator) {
+        let result;
         switch (operator) {
             case 'x^2':
-                display.value = Math.pow(parseFloat(display.value), 2).toFixed(2);
+                result = Math.pow(parseFloat(display.value), 2);
                 break;
             case 'x^3':
-                display.value = Math.pow(parseFloat(display.value), 3).toFixed(2);
+                result = Math.pow(parseFloat(display.value), 3);
                 break;
             case 'x^y':
                 firstNumber = display.value;
                 currentOperation = 'x^y';
                 display.value = '';
-                break;
+                return; // Early return to avoid clearing the display prematurely
             case 'e^x':
-                display.value = Math.exp(parseFloat(display.value)).toFixed(2);
+                result = Math.exp(parseFloat(display.value));
                 break;
             case '10^x':
-                display.value = Math.pow(10, parseFloat(display.value)).toFixed(2);
+                result = Math.pow(10, parseFloat(display.value));
                 break;
             case '1/x':
-                display.value = (1 / parseFloat(display.value)).toFixed(2);
+                result = 1 / parseFloat(display.value);
                 break;
             case 'sqrx':
-                display.value = Math.sqrt(parseFloat(display.value)).toFixed(2);
+                result = Math.sqrt(parseFloat(display.value));
                 break;
             case 'cubicx':
-                display.value = Math.cbrt(parseFloat(display.value)).toFixed(2);
+                result = Math.cbrt(parseFloat(display.value));
                 break;
             case 'ysquarex':
                 firstNumber = display.value;
                 currentOperation = 'ysquarex';
                 display.value = '';
-                break;
+                return;
             case 'In':
-                display.value = Math.log(parseFloat(display.value)).toFixed(2);
+                result = Math.log(parseFloat(display.value));
                 break;
             case 'log10':
-                display.value = Math.log10(parseFloat(display.value)).toFixed(2);
+                result = Math.log10(parseFloat(display.value));
                 break;
             case 'sin':
-                display.value = Math.sin(parseFloat(display.value)).toFixed(2);
+                result = Math.sin(parseFloat(display.value));
                 break;
             case 'cos':
-                display.value = Math.cos(parseFloat(display.value)).toFixed(2);
+                result = Math.cos(parseFloat(display.value));
                 break;
             case 'tan':
-                display.value = Math.tan(parseFloat(display.value)).toFixed(2);
+                result = Math.tan(parseFloat(display.value));
                 break;
             case 'sinh':
-                display.value = Math.sinh(parseFloat(display.value)).toFixed(2);
+                result = Math.sinh(parseFloat(display.value));
                 break;
             case 'cosh':
-                display.value = Math.cosh(parseFloat(display.value)).toFixed(2);
+                result = Math.cosh(parseFloat(display.value));
                 break;
             case 'tanh':
-                display.value = Math.tanh(parseFloat(display.value)).toFixed(2);
+                result = Math.tanh(parseFloat(display.value));
                 break;
             case 'pi':
-                display.value = Math.PI.toFixed(8);
+                result = Math.PI;
                 break;
             case 'e':
-                display.value = Math.E.toFixed(8);
+                result = Math.E;
                 break;
             case 'Rand':
-                display.value = Math.random().toFixed(15);
+                result = Math.random();
                 break;
         }
+        display.value = isNaN(result) ? '0' : result.toFixed(2);
     }
 
     function calculate() {
@@ -108,18 +110,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     result = parseFloat(firstNumber) * parseFloat(secondNumber);
                     break;
                 case '/':
-                    if (parseFloat(secondNumber) !== 0) {
-                        result = parseFloat(firstNumber) / parseFloat(secondNumber);
-                    } else {
-                        redirectToUrl("https://www.youtube.com/playlist?list=PLTPg64KdGgYhYpS5nXdFgdqEZDOS5lARB");
-                    }
+                    result = parseFloat(secondNumber) !== 0 ? parseFloat(firstNumber) / parseFloat(secondNumber) : NaN;
                     break;
                 case '%':
                     result = (parseFloat(firstNumber) * parseFloat(secondNumber)) / 100;
                     break;
             }
         }
-        display.value = result.toFixed(2);
+        display.value = isNaN(result) ? '0' : result.toFixed(2);
         currentOperation = null;
     }
 
