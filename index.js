@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         currentOperation = null;
     }
     function toggleSign() {
-        if (display.value) { // Certifica-se de que existe um valor para alterar
+        if (display.value) {
             display.value = parseFloat(display.value) * -1;
         }
     }
